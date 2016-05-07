@@ -1,0 +1,25 @@
+{
+  "name": "finance_collectionner",
+  "version": "0.0.1",
+  "description": "",
+  "main": "finance_collectionner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vladimir37/Finance_Collectionner.git"
+  },
+  "author": "Vladimir37",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vladimir37/Finance_Collectionner/issues"
+  },
+  "homepage": "https://github.com/Vladimir37/Finance_Collectionner#readme",
+  "dependencies": {
+    "finance-stream": "0.0.2",
+    "restify": "^4.0.4",
+    "sequelize": "*",
+    "sqlite3": "*"
+  }
+}
