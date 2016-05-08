@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 
-var db_config = require('../config');
+var db_config = require('../../config');
 
 var sequelize = new Sequelize({
     dialect: 'sqlite',

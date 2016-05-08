@@ -1,7 +1,7 @@
 var model = require('./model');
 
 function cleaning() {
-    var old_date = +new Date() - 30000;
+    var old_date = +new Date() - 86400000;
     model.destroy({
         where: {
             date: {
