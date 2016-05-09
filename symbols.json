@@ -1,5 +1,18 @@
 [
     "YHOO",
     "GOOG",
-    "EURUSD=X"
+    "MSFT",
+    "AAPL",
+    "EURUSD=X",
+    "GBP=X",
+    "AUD=X",
+    "RUB=X",
+    "MXN=X",
+    "JPY=X",
+    "CAD=X",
+    "DOW",
+    "NAQ.F",
+    "GCK16.CMX",
+    "SI.CMX",
+    "BZ.NYM"
 ]
