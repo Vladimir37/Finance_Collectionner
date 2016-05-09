@@ -1,3 +1,6 @@
+var fs = require('fs');
+var prettyBytes = require('pretty-bytes');
+
 var model = require('./model');
 
 var periods = {
@@ -60,8 +63,8 @@ function response(req, res, next) {
             result_obj.date = notes[i].date;
             result_obj.open = current_arr[0];
             result_obj.close = current_arr[current_arr.length - 1];
-            result_obj.max = Math.max.apply(null, notes_price);
-            result_obj.min = Math.min.apply(null, notes_price);
+            result_obj.max = Math.max.apply(null, current_arr);
+            result_obj.min = Math.min.apply(null, current_arr);
             candles.push(result_obj);
         }
         return res.send(serialize(0, candles));
@@ -71,4 +74,14 @@ function response(req, res, next) {
     });
 }
 
-module.exports = response;
+function size(req, res, next) {
+    fs.stat('database.sqlite', function(err, stat) {
+        if(err) {
+            return res.send(serialize(1, err));
+        }
+        return res.send(serialize(0, prettyBytes(stat.size)));
+    });
+}
+
+exports.response = response;
+exports.size = size;
