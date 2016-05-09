@@ -29,11 +29,10 @@ var periods = {
 
 function serialize(status, body) {
     body = body || null;
-    var result = {
+    return {
         status,
         body
     };
-    return result;
 }
 
 function response(req, res, next) {

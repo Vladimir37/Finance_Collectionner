@@ -1,3 +1,5 @@
 {
-    "storage": "database.sqlite"
+    "port": 49005,
+    "storage": "database.sqlite",
+    "limit": 1209600000
 }

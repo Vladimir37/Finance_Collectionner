@@ -1,7 +1,8 @@
 var model = require('./model');
+var config = require('../../config');
 
 function cleaning() {
-    var old_date = +new Date() - 86400000;
+    var old_date = +new Date() - config.limit;
     model.destroy({
         where: {
             date: {
